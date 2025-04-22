@@ -1,0 +1,13 @@
+
+Host: 127.0.0.1
+Port: 5672
+User: guest
+Pass: guest
+ConsumerList: 
+  test:
+    PrefetchCount: 1
+    QueueName: test
+PublisherList:
+  test: 
+    Exchange: ""
+    RoutingKey: test
