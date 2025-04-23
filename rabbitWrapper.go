@@ -23,6 +23,11 @@ type ChannelType struct {
 	ch         *rabbitmq.Channel
 }
 
+func (c *ChannelType)GetDeliveryChan()<-chan rabbitmq.Delivery{
+	return c.deliveryCh
+}
+
+
 type rabbitDirect struct {
 	consumerConn  *rabbitmq.Connection
 	publisherConn *rabbitmq.Connection
