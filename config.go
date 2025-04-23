@@ -6,7 +6,7 @@ import (
 	"github.com/ilyakaznacheev/cleanenv"
 )
 
-type configType struct {
+type ConfigType struct {
 	Host          string                   `yaml:"Host"`
 	Port          string                   `yaml:"Port"`
 	User          string                   `yaml:"User"`
@@ -25,11 +25,11 @@ type PublisherType struct {
 	RoutingKey string `yaml:"RoutingKey"`
 }
 
-var globalConfig *configType
+var globalConfig *ConfigType
 
-func GetConfig() *configType {
+func GetConfig() *ConfigType {
 	if globalConfig == nil {
-		globalConfig = &configType{}
+		globalConfig = &ConfigType{}
 	}
 
 	return globalConfig

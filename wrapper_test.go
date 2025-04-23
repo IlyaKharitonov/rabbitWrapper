@@ -12,22 +12,7 @@ import (
 func TestWrapper(t *testing.T) {
 	// развернуть рэббит в докере с панелью управления sudo docker run --rm -d -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 
-	// cL := make(map[string]ConsumerType)
-	// cL["test"] = ConsumerType{QueueName: "test", PrefetchCount: 10}
-
-	// pL := make(map[string]PublisherType)
-	// pL["test"] = PublisherType{Exchange: "", RoutingKey: "test"}
-	// pL["prod"] = PublisherType{Exchange: "", RoutingKey: "prod"}
-
-	// config := configType{
-	// 	Host:          "127.0.0.1",
-	// 	Port:          "5672",
-	// 	Pass:          "guest",
-	// 	User:          "guest",
-	// 	ConsumerList:  cL,
-	// 	PublisherList: pL,
-	// }
-
+	
 	ParseConfig("./config.yaml")
 	// fmt.Println(GetConfig())
 

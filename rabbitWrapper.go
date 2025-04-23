@@ -31,7 +31,7 @@ type rabbitDirect struct {
 	publisherList map[string]*ChannelType
 }
 
-func NewDirect(config *configType) *rabbitDirect {
+func NewDirect(config *ConfigType) *rabbitDirect {
 	rabbit := &rabbitDirect{
 		consumerList:  make(map[string]*ChannelType, len(config.ConsumerList)),
 		publisherList: make(map[string]*ChannelType, len(config.PublisherList)),
